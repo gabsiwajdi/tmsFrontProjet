@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/components/employe/employe.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1704279689560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704279723319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,19 @@\n \n import { EmployeRoutingModule } from './employe-routing.module';\n import { EmployeComponent } from './employe.component';\n \n+import { MatFormFieldModule } from '@angular/material/form-field';\n+import { MatStepperModule } from '@angular/material/stepper';\n+import { MatIconModule } from '@angular/material/icon';\n+import { MatInputModule } from '@angular/material/input';\n+import { MatDatepickerModule } from '@angular/material/datepicker';\n+import { MatNativeDateModule } from '@angular/material/core';\n+import { MatSelectModule } from '@angular/material/select';\n+import { MatButtonModule } from '@angular/material/button';\n+import { MatProgressBarModule } from '@angular/material/progress-bar';\n+import { MatTableModule } from '@angular/material/table';\n+\n @NgModule({\n   declarations: [EmployeComponent],\n   imports: [\n     CommonModule,\n"
+                },
+                {
+                    "date": 1704279749577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,12 @@\n import { MatSelectModule } from '@angular/material/select';\n import { MatButtonModule } from '@angular/material/button';\n import { MatProgressBarModule } from '@angular/material/progress-bar';\n import { MatTableModule } from '@angular/material/table';\n+import { MatPaginatorModule } from '@angular/material/paginator';\n+import { MatSortModule } from '@angular/material/sort';\n+import { MatTableFilterModule } from 'mat-table-filter';\n+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\n \n @NgModule({\n   declarations: [EmployeComponent],\n   imports: [\n"
+                }
+            ],
+            "date": 1704279689560,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { EmployeRoutingModule } from './employe-routing.module';\nimport { EmployeComponent } from './employe.component';\n\n\n@NgModule({\n  declarations: [EmployeComponent],\n  imports: [\n    CommonModule,\n    EmployeRoutingModule,\n    MatFormFieldModule,\n    MatStepperModule,\n    MatIconModule,\n    MatInputModule,\n    MatTabsModule,\n    MatTableFilterModule,\n    MatProgressSpinnerModule,\n    MatDatepickerModule,\n    MatNativeDateModule,\n    MatSelectModule,\n    MatCheckboxModule,MatCardModule,NgxMatFileInputModule,\n    MatButtonModule,\n    MatProgressBarModule,\n    MatTableModule,\n    FormsModule,\n    MatPaginatorModule,\n    ReactiveFormsModule,\n    MatSortModule\n  ]\n})\nexport class EmployeModule { }\n"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/rh/rh.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1703844616411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703844946353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,1 @@\n-<p>rh works!</p>\n-<router-outlet></router-outlet>\n\\ No newline at end of file\n+<p>rh works!</p>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703845244392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-<p>rh works!</p>\n\\ No newline at end of file\n+<p>rh works!</p>\n+<router-outlet></router-outlet>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703847241436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,56 @@\n-<p>rh works!</p>\n+<div>\n+    <div class=\"menu\">\n+        <div class=\"inline\">\n+            <a routerLink=\"/Menu/Menu-RH/Menu-employee\"><img src=\"./../../assets/images/rh/acces.png\" />\n+                <h2> Employees </h2>\n+            </a>\n+\n+        </div>\n+\n+\n+        <div class=\"inline\">\n+            <a routerLink=\"/Menu/Menu-RH/Menu-conge\"><img src=\"./../../assets/images/rh/congee.png\" />\n+                <h2>Congee</h2>\n+            </a>\n+        </div>\n+\n+\n+\n+\n+        <div class=\"inline\">\n+            <a routerLink=\"/Menu/Menu-RH/Menu-bulletin-paie\"><img src=\"./../../assets/images/rh/bull.jpg\" />\n+                <h2>Bulletin paie</h2>\n+            </a>\n+\n+            <div class=\"inline\">\n+                <a *ngIf=\"rh > 3\" routerLink=\"/Menu/Menu-RH/Menu-contrat\"><img\n+                        src=\"./../../assets/images/rh/contrat.png\" />\n+                    <h2>Contrat</h2>\n+                </a>\n+\n+            </div>\n+\n+\n+            <div class=\"inline\">\n+                <a routerLink=\"/Menu/Menu-RH/Menu-Feries\"><img src=\"./../../assets/images/rh/congee.png\" />\n+                    <h2>Jours Féries</h2>\n+                </a>\n+            </div>\n+\n+            <div class=\"inline\">\n+                <a routerLink=\"/Menu/Menu-RH/Pointage\"><img src=\"./../../assets/images/rh/Pointage.jpg\" />\n+                    <h2>Pointage</h2>\n+                </a>\n+\n+            </div>\n+\n+            <div class=\"inline\">\n+                <a routerLink=\"/Menu/Menu-RH/Menu-Config\"><img src=\"./../../assets/images/rh/Pointage.jpg\" />\n+                    <h2>Configuration RH</h2>\n+                </a>\n+\n+            </div>\n+\n+        </div>\n+    </div>\n <router-outlet></router-outlet>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703847291375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,50 +7,12 @@\n \n         </div>\n \n \n-        <div class=\"inline\">\n-            <a routerLink=\"/Menu/Menu-RH/Menu-conge\"><img src=\"./../../assets/images/rh/congee.png\" />\n-                <h2>Congee</h2>\n-            </a>\n-        </div>\n \n \n \n \n-        <div class=\"inline\">\n-            <a routerLink=\"/Menu/Menu-RH/Menu-bulletin-paie\"><img src=\"./../../assets/images/rh/bull.jpg\" />\n-                <h2>Bulletin paie</h2>\n-            </a>\n \n-            <div class=\"inline\">\n-                <a *ngIf=\"rh > 3\" routerLink=\"/Menu/Menu-RH/Menu-contrat\"><img\n-                        src=\"./../../assets/images/rh/contrat.png\" />\n-                    <h2>Contrat</h2>\n-                </a>\n-\n-            </div>\n-\n-\n-            <div class=\"inline\">\n-                <a routerLink=\"/Menu/Menu-RH/Menu-Feries\"><img src=\"./../../assets/images/rh/congee.png\" />\n-                    <h2>Jours Féries</h2>\n-                </a>\n-            </div>\n-\n-            <div class=\"inline\">\n-                <a routerLink=\"/Menu/Menu-RH/Pointage\"><img src=\"./../../assets/images/rh/Pointage.jpg\" />\n-                    <h2>Pointage</h2>\n-                </a>\n-\n-            </div>\n-\n-            <div class=\"inline\">\n-                <a routerLink=\"/Menu/Menu-RH/Menu-Config\"><img src=\"./../../assets/images/rh/Pointage.jpg\" />\n-                    <h2>Configuration RH</h2>\n-                </a>\n-\n-            </div>\n-\n-        </div>\n     </div>\n-    <router-outlet></router-outlet>\n\\ No newline at end of file\n+</div>\n+<router-outlet></router-outlet>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703847338539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,18 @@\n <div>\n     <div class=\"menu\">\n+\n         <div class=\"inline\">\n             <a routerLink=\"/Menu/Menu-RH/Menu-employee\"><img src=\"./../../assets/images/rh/acces.png\" />\n                 <h2> Employees </h2>\n             </a>\n+        </div>\n \n+\n+        <div class=\"inline\">\n+            <a routerLink=\"/Menu/Menu-RH/Menu-conge\"><img src=\"./../../assets/images/rh/congee.png\" />\n+                <h2>Contrat</h2>\n+            </a>\n         </div>\n \n \n \n"
+                }
+            ],
+            "date": 1703844616411,
+            "name": "Commit-0",
+            "content": "<p>rh works!</p>\n<router-outlet></router-outlet>"
+        }
+    ]
+}

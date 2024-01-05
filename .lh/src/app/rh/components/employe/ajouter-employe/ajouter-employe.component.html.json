@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/components/employe/ajouter-employe/ajouter-employe.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1704279618586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704280182268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,3 @@\n <mat-vertical-stepper [linear]=\"passage_etape\" #stepper>\n-    <mat-step [stepControl]=\"Informations_Generales_Form\">\n-    </mat-step>\n+\n </mat-vertical-stepper>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704280375869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,2 @@\n <mat-vertical-stepper [linear]=\"passage_etape\" #stepper>\n-\n </mat-vertical-stepper>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1704279618586,
+            "name": "Commit-0",
+            "content": "<mat-vertical-stepper [linear]=\"passage_etape\" #stepper>\n    <mat-step [stepControl]=\"Informations_Generales_Form\">\n        </mat-step>\n        </mat-vertical-stepper>"
+        }
+    ]
+}

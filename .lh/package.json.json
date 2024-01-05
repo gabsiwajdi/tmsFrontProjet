@@ -1,0 +1,18 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1704377508845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1704377508845,
+            "name": "Commit-0",
+            "content": "{\r\n  \"name\": \"version0\",\r\n  \"version\": \"0.0.0\",\r\n  \"scripts\": {\r\n    \"postinstall\": \"ngcc\",\r\n    \"ng\": \"ng\",\r\n    \"start\": \"ng serve --proxy-config proxy.conf.json\",\r\n    \"build\": \"ng build\",\r\n    \"test\": \"ng test\",\r\n    \"lint\": \"ng lint\",\r\n    \"e2e\": \"ng e2e\"\r\n  },\r\n  \"private\": true,\r\n  \"dependencies\": {\r\n    \"@agm/core\": \"^1.1.0\",\r\n    \"@angular-material-components/file-input\": \"^5.0.1\",\r\n    \"@angular/animations\": \"~11.0.5\",\r\n    \"@angular/cdk\": \"^11.1.0\",\r\n    \"@angular/common\": \"~11.0.5\",\r\n    \"@angular/compiler\": \"~11.0.5\",\r\n    \"@angular/core\": \"~11.0.5\",\r\n    \"@angular/flex-layout\": \"^11.0.0-beta.33\",\r\n    \"@angular/forms\": \"~11.0.5\",\r\n    \"@angular/material\": \"^11.1.0\",\r\n    \"@angular/platform-browser\": \"~11.0.5\",\r\n    \"@angular/platform-browser-dynamic\": \"~11.0.5\",\r\n    \"@angular/router\": \"~11.0.5\",\r\n    \"@material/card\": \"^9.0.0\",\r\n    \"@material/tabs\": \"^2.3.0\",\r\n    \"@ng-select/ng-select\": \"^6.1.0\",\r\n    \"@swimlane/ngx-datatable\": \"^19.0.0\",\r\n    \"@types/file-saver\": \"^2.0.1\",\r\n    \"@types/google.maps\": \"^3.49.2\",\r\n    \"angular-material-datepicker\": \"^1.0.2\",\r\n    \"angular-material-pagination\": \"^1.0.2\",\r\n    \"angular2-qrcode\": \"^2.0.3\",\r\n    \"fabric\": \"^4.5.1\",\r\n    \"file-saver\": \"^2.0.5\",\r\n    \"mat-table-filter\": \"^9.1.0\",\r\n    \"material-steppers\": \"^2.0.0\",\r\n    \"material-table\": \"^1.69.2\",\r\n    \"moment\": \"^2.29.1\",\r\n    \"net\": \"^1.0.2\",\r\n    \"ng-qrcode\": \"^5.0.0\",\r\n    \"ng2-pdf-viewer\": \"^6.3.2\",\r\n    \"ngx-barcode\": \"^0.3.0\",\r\n    \"pdfmake\": \"^0.1.70\",\r\n    \"rxjs\": \"~6.6.0\",\r\n    \"safe-pipe\": \"^1.0.3\",\r\n    \"sockjs-client\": \"^1.6.1\",\r\n    \"stompjs\": \"^2.3.3\",\r\n    \"stream\": \"0.0.2\",\r\n    \"sweetalert2\": \"^10.13.0\",\r\n    \"timers\": \"^0.1.1\",\r\n    \"tslib\": \"^2.0.0\",\r\n    \"write-file\": \"^1.0.0\",\r\n    \"zone.js\": \"~0.10.2\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@angular-devkit/build-angular\": \"^0.1100.7\",\r\n    \"@angular/cli\": \"~11.0.5\",\r\n    \"@angular/compiler-cli\": \"~11.0.5\",\r\n    \"@types/googlemaps\": \"^3.39.13\",\r\n    \"@types/jasmine\": \"~3.6.0\",\r\n    \"@types/node\": \"^20.10.5\",\r\n    \"@types/xml2js\": \"^0.4.8\",\r\n    \"codelyzer\": \"^6.0.0\",\r\n    \"jasmine-core\": \"~3.6.0\",\r\n    \"jasmine-spec-reporter\": \"~5.0.0\",\r\n    \"karma\": \"~5.1.0\",\r\n    \"karma-chrome-launcher\": \"~3.1.0\",\r\n    \"karma-coverage\": \"~2.0.3\",\r\n    \"karma-jasmine\": \"~4.0.0\",\r\n    \"karma-jasmine-html-reporter\": \"^1.5.0\",\r\n    \"protractor\": \"~7.0.0\",\r\n    \"ts-node\": \"~8.3.0\",\r\n    \"tslint\": \"~6.1.0\",\r\n    \"typescript\": \"~4.0.2\"\r\n  }\r\n}\r\n"
+        }
+    ]
+}

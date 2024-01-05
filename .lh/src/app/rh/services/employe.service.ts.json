@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/services/employe.service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1704365890164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704365948298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,12 @@\n @Injectable({\n   providedIn: 'root',\n })\n export class EmployeService {\n-  constructor(private http: HttpClient) {}\n+  constructor(private http: HttpClient) {\n+\n+  }\n+\n+  creerEmploye(){\n+    \n+  }\n }\n"
+                },
+                {
+                    "date": 1704366063045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import { HttpClient } from '@angular/common/http';\n import { Injectable } from '@angular/core';\n+import { environment } from 'src/environments/environment';\n \n @Injectable({\n   providedIn: 'root',\n })\n export class EmployeService {\n   constructor(private http: HttpClient) {}\n \n   creerEmploye(model: any) {\n-    return this.http.post();\n+    return this.http.post(environment.baseAPI +);\n   }\n }\n"
+                }
+            ],
+            "date": 1704365890164,
+            "name": "Commit-0",
+            "content": "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class EmployeService {\n\n  constructor(private http :HttpClient) { }\n}\n"
+        }
+    ]
+}

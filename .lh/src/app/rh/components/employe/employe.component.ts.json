@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/components/employe/employe.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703841703431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703841716564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n   templateUrl: './employe.component.html',\n   styleUrls: ['./employe.component.scss'],\n })\n export class EmployeComponent implements OnInit {\n+  listerEstActive = false;\n+  ajouterEstActive = false;\n   constructor() {}\n \n   ngOnInit(): void {}\n \n"
+                },
+                {
+                    "date": 1703841767274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,15 @@\n   activerLister() {\n     this.listerEstActive = true;\n     this.ajouterEstActive = false;\n   }\n+\n+  onActivate(componentReference) {\n+    if (componentReference.ajoutTermine) {\n+      componentReference.ajoutTermine.subscribe((data) => {\n+        if (data) {\n+          this.activerLister()\n+        }\n+      });\n+    }\n+  }\n }\n"
+                }
+            ],
+            "date": 1703841703431,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-employe',\n  templateUrl: './employe.component.html',\n  styleUrls: ['./employe.component.scss']\n})\nexport class EmployeComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  activerLister() {\n    this.listerEstActive = true;\n    this.ajouterEstActive = false;\n  }\n\n}\n"
+        }
+    ]
+}

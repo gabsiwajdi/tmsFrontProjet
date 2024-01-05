@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/components/employe/employe-routing.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703845133068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703845569259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import { ListeEmployeComponent } from './liste-employe/liste-employe.component';\n \n const routes: Routes = [\n   {\n-    path: '',\n+    path: 'employe',\n     component: EmployeComponent,\n     children: [\n       { path: 'Ajouter-employee', component: AjouterEmployeComponent },\n       { path: 'Modifer-employee/:id', component: ModifierEmployeComponent },\n"
+                },
+                {
+                    "date": 1703845635172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import { ListeEmployeComponent } from './liste-employe/liste-employe.component';\n \n const routes: Routes = [\n   {\n-    path: 'employe',\n+    path: '',\n     component: EmployeComponent,\n     children: [\n       { path: 'Ajouter-employee', component: AjouterEmployeComponent },\n       { path: 'Modifer-employee/:id', component: ModifierEmployeComponent },\n"
+                }
+            ],
+            "date": 1703845133068,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { Routes, RouterModule } from '@angular/router';\nimport { EmployeComponent } from './employe.component';\nimport { AjouterEmployeComponent } from './ajouter-employe/ajouter-employe.component';\nimport { ModifierEmployeComponent } from './modifier-employe/modifier-employe.component';\nimport { ListeEmployeComponent } from './liste-employe/liste-employe.component';\n\nconst routes: Routes = [\n  { path: '', component: EmployeComponent , children: [\n    { path: 'Ajouter-employee', component: AjouterEmployeComponent },\n    { path: 'Modifer-employee/:id', component: ModifierEmployeComponent },\n    { path: 'Lister-employee', component: ListeEmployeComponent },\n    ]}\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class EmployeRoutingModule { }\n"
+        }
+    ]
+}

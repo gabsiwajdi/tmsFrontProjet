@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/app-routing.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1703839126510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703839148824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { NgModule } from '@angular/core';\n import { RouterModule, Routes } from '@angular/router';\n \n const routes: Routes = [\n-  {path:'',component:}\n+  {path:'',component:log}\n ];\n \n @NgModule({\n   imports: [RouterModule.forRoot(routes)],\n"
+                },
+                {
+                    "date": 1703839412784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,15 @@\n import { NgModule } from '@angular/core';\n import { RouterModule, Routes } from '@angular/router';\n \n-const routes: Routes = [{ path: '', component: log }];\n+const routes: Routes = [ { path: '', redirectTo: 'cnx', pathMatch: 'full' },\n+{\n+  path: 'cnx',\n+  loadChildren: () =>\n+    import('./authentification/components/login/login.component').then(\n+      (m) => m.LoginComponent\n+    ),\n+},];\n \n @NgModule({\n   imports: [RouterModule.forRoot(routes)],\n   exports: [RouterModule],\n"
+                },
+                {
+                    "date": 1703839492205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n     loadChildren: () =>\n       import('./authentification/components/login/login.component').then(\n         (m) => m.LoginComponent\n       ),\n+      \n   },\n ];\n \n @NgModule({\n"
+                }
+            ],
+            "date": 1703839126510,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [\n  {path:'',component:}\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n"
+        }
+    ]
+}

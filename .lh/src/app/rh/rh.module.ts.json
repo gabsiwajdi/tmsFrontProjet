@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/rh.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703838528490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703841103613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,13 @@\n \n import { RhRoutingModule } from './rh-routing.module';\n import { ListeEmployeComponent } from './components/employe/liste-employe/liste-employe.component';\n import { AjouterContratComponent } from './components/contrat/ajouter-contrat/ajouter-contrat.component';\n-import { MenuRHComponent } from './components/menu-rh/menu-rh.component';\n import { RhComponent } from './rh.component';\n \n \n @NgModule({\n-  declarations: [ListeEmployeComponent, AjouterContratComponent, MenuRHComponent, RhComponent],\n+  declarations: [ListeEmployeComponent, AjouterContratComponent, RhComponent],\n   imports: [\n     CommonModule,\n     RhRoutingModule\n   ]\n"
+                },
+                {
+                    "date": 1704281850782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,11 @@\n import { ListeEmployeComponent } from './components/employe/liste-employe/liste-employe.component';\n import { AjouterContratComponent } from './components/contrat/ajouter-contrat/ajouter-contrat.component';\n import { RhComponent } from './rh.component';\n import { ContratComponent } from './components/contrat/contrat.component';\n+import { AjouterEmployeComponent } from './components/employe/ajouter-employe/ajouter-employe.component';\n \n @NgModule({\n-  declarations: [ListeEmployeComponent, AjouterContratComponent, RhComponent, ContratComponent],\n+  declarations: [ListeEmployeComponent, AjouterContratComponent, RhComponent, ContratComponent,AjouterEmployeComponent],\n   imports: [CommonModule, RhRoutingModule],\n })\n export class RhModule {}\n"
+                }
+            ],
+            "date": 1703838528490,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { RhRoutingModule } from './rh-routing.module';\nimport { ListeEmployeComponent } from './components/employe/liste-employe/liste-employe.component';\nimport { AjouterContratComponent } from './components/contrat/ajouter-contrat/ajouter-contrat.component';\n\n\n@NgModule({\n  declarations: [ListeEmployeComponent, AjouterContratComponent],\n  imports: [\n    CommonModule,\n    RhRoutingModule\n  ]\n})\nexport class RhModule { }\n"
+        }
+    ]
+}

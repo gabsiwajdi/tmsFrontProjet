@@ -1,0 +1,328 @@
+<mat-vertical-stepper [linear]="etapeSuivant" #stepper>
+    <mat-step [stepControl]="InformationsGeneralesForm">
+        <form [formGroup]="InformationsGeneralesForm">
+
+            <ng-template matStepLabel>Informations Employe</ng-template>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="nomSte">Nom </mat-label>
+                        <input type="text" matInput formControlName="nom" id="nom" name="nom" required>
+
+                    </mat-form-field>
+
+
+                </div>
+                <mat-form-field>
+
+                    <mat-label for="numRegistreCommerciale">prenom </mat-label>
+                    <input type="text" matInput formControlName="prenom" id="prenom" name="prenom" required>
+
+                </mat-form-field>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="numRegistreCommerciale">Adress </mat-label>
+                        <input type="text" matInput formControlName="adress" id="adress" name="adress" required>
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="numRegistreCommerciale">Ville </mat-label>
+                        <input type="text" matInput formControlName="ville" id="ville" name="ville" required>
+
+                    </mat-form-field>
+                </div>
+
+
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+                        <mat-label for="numRegistreCommerciale"> N°Telephone </mat-label>
+                        <input type="text" matInput formControlName="tel" id="tel" name="tel" required>
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+                        <mat-label for="dateDelivranceIdentite"> Date De Naissance </mat-label>
+                        <input matInput formControlName="dateNaissance" id="dateNaissance" [matDatepicker]="picker1"
+                            placeholder="DD/MM/YYYY" name="dateNaissance">
+                        <mat-datepicker-toggle matSuffix [for]="picker1" value="dateNaissance">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+
+                    <mat-form-field>
+                        <mat-label for="numRegistreCommerciale">Nationalite </mat-label>
+                        <input type="text" matInput formControlName="nationalite" id="nationalite" name="nationalite"
+                            required>
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+                        <mat-label>Situation Familiale</mat-label>
+                        <input type="text" matInput formControlName="situationFamiliale"
+                            placeholder="situationFamiliale" name="situationFamiliale" id="situationFamiliale" required>
+                        <!--mat-error *ngIf="Informations_Banques_Form.get('Email').invalid">
+                                    {{MessageErreurEmail()}}</mat-error-->
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+
+                    <mat-form-field>
+
+                        <mat-label for="enfantEnCharge">Enfant En Charge</mat-label>
+                        <input type="number" matInput formControlName="enfantEnCharge" id="enfantEnCharge"
+                            name="enfantEnCharge" required>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="pieceIdentite"> Type Piece Identité </mat-label>
+                        <mat-select formControlName="pieceIdentite" id="pieceIdentite" name="pieceIdentite"
+                            placeholder="pieceIdentite">
+                            <mat-option></mat-option>
+                            <mat-option value="cin">CIN </mat-option>
+                            <mat-option value="passport">Passport </mat-option>
+
+                        </mat-select>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="numRegistreCommerciale">N°Piece Identite </mat-label>
+                        <input type="text" matInput formControlName="numPieceIdentite" id="numPieceIdentite"
+                            name="numPieceIdentite" required>
+
+                    </mat-form-field>
+
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+                        <mat-label for="dateDelivranceIdentite"> Date De Délivrance </mat-label>
+                        <input matInput formControlName="dateDelivranceIdentite" id="dateDelivranceIdentite"
+                            [matDatepicker]="picker4" placeholder="DD/MM/YYYY" name="dateDelivranceIdentite">
+                        <mat-datepicker-toggle matSuffix [for]="picker4" value="dateDelivranceIdentite">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker4></mat-datepicker>
+
+                    </mat-form-field>
+
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="posteEmploye"> Poste </mat-label>
+                        <mat-select formControlName="posteEmploye" id="posteEmploye" name="posteEmploye"
+                            placeholder="posteEmploye">
+                            <mat-option></mat-option>
+                            <mat-option value="Chef des ventes">Chef des ventes </mat-option>
+                            <mat-option value="Responsable export">Responsable export </mat-option>
+                            <mat-option value="Responsable marketing">Responsable marketing </mat-option>
+                            <mat-option value="Chef de projet">Chef de projet </mat-option>
+                            <mat-option value="chauffeur">Chauffeur </mat-option>
+                            <mat-option value="agent de depot">Agent De Depot </mat-option>
+                        </mat-select>
+
+
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+        </form>
+    </mat-step>
+
+    <mat-step [stepControl]="informationsBanquesForm">
+        <form [formGroup]="informationsBanquesForm">
+
+            <ng-template matStepLabel>Informations Spécifique</ng-template>
+
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label> Image du Employé </mat-label>
+                        <ngx-mat-file-input matInput id="image" name="image" formControlName="image"
+                            placeholder="Sélectionner image" accept="image/png, image/jpeg">
+                        </ngx-mat-file-input>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+
+                        <mat-label for="banque"> Banque </mat-label>
+                        <mat-select formControlName="banque" id="banque" name="banque" placeholder="banque">
+                            <mat-option></mat-option>
+                            <mat-option value="attijari">Attijari </mat-option>
+                            <mat-option value="zaytouna">Zaytouna </mat-option>
+                            <mat-option value="biat">BIAT </mat-option>
+                            <mat-option value="bh">BH </mat-option>
+                            <mat-option value="amenbanque">AMEN BANQUE </mat-option>
+                        </mat-select>
+
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+
+                        <mat-label for="rib"> RIB </mat-label>
+                        <input type="text" matInput formControlName="rib" id="rib" name="rib" style='margin: 0; '
+                            required>
+
+
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+        </form>
+    </mat-step>
+
+    <mat-step [stepControl]="InformationsSupplimentaireForm">
+        <form [formGroup]="InformationsSupplimentaireForm">
+
+            <ng-template matStepLabel>Informations Supplimentaire</ng-template>
+
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+
+                        <mat-label for="permis"> Pérmis </mat-label>
+                        <mat-select formControlName="permis" id="permis" name="permis" placeholder="permis">
+                            <mat-option></mat-option>
+                            <mat-option value="oui">OUI </mat-option>
+                            <mat-option value="non">NON </mat-option>
+                        </mat-select>
+
+
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="categoriePermis"> Catégorie Permis </mat-label>
+                        <mat-select formControlName="categoriePermis" id="categoriePermis" name="categoriePermis"
+                            placeholder="categoriePermis"
+                            [disabled]="InformationsSupplimentaireForm.get('permis').value === 'non'">
+                            <mat-option></mat-option>
+                            <mat-option value="a">A </mat-option>
+                            <mat-option value="b">B </mat-option>
+                            <mat-option value="c">C</mat-option>
+                            <mat-option value="be">B+E </mat-option>
+                            <mat-option value="ce">C+E </mat-option>
+                            <mat-option value="d">D</mat-option>
+                            <mat-option value="de">D+E</mat-option>
+                            <mat-option value="d1">D1</mat-option>
+                            <mat-option value="h">H</mat-option>
+
+                        </mat-select>
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="dateExpirationPermis"> Date De Délivrance </mat-label>
+                        <input matInput formControlName="dateExpirationPermis" id="dateExpirationPermis"
+                            [matDatepicker]="picker2" placeholder="DD/MM/YYYY" name="dateExpirationPermis">
+                        <mat-datepicker-toggle matSuffix [for]="picker2" value="dateExpirationPermis"
+                            [disabled]="InformationsSupplimentaireForm.get('permis').value === 'non'">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+
+                    </mat-form-field>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="cnss">CNSS </mat-label>
+                        <input type="text" matInput formControlName="cnss" id="cnss" name="cnss" required>
+                    </mat-form-field>
+                </div>
+
+
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="numImattriculationSociale">N° Immatriculation Sociale </mat-label>
+                        <input type="text" matInput formControlName="numImattriculationSociale"
+                            id="numImattriculationSociale" name="numImattriculationSociale" required>
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="description">Description </mat-label>
+                        <input type="text" matInput formControlName="description" id="description" name="description"
+                            required>
+                    </mat-form-field>
+
+
+                </div>
+
+
+            </div>
+
+            <div>
+                <button mat-button matStepperPrevious class="btn-primary"
+                    style="margin-top: 20px; margin-right: 20px;">Retour</button>
+                <button mat-button matStepperNext class="btn-primary" (click)="ajouterEmploye()">Enregistrer</button>
+            </div>
+
+        </form>
+    </mat-step>
+
+
+</mat-vertical-stepper>

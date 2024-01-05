@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/components/employe/ajouter-employe/ajouter-employe.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1704280698926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704280710745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n   templateUrl: './ajouter-employe.component.html',\n   styleUrls: ['./ajouter-employe.component.scss'],\n })\n export class AjouterEmployeComponent implements OnInit {\n-  passage_etape = true;\n \n   constructor() {}\n \n   ngOnInit(): void {}\n"
+                },
+                {
+                    "date": 1704281453613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Component, OnInit } from '@angular/core';\n+import {MatStepperModule} from '@angular/material/stepper';\n \n @Component({\n   selector: 'app-ajouter-employe',\n   templateUrl: './ajouter-employe.component.html',\n"
+                }
+            ],
+            "date": 1704280698926,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-ajouter-employe',\n  templateUrl: './ajouter-employe.component.html',\n  styleUrls: ['./ajouter-employe.component.scss']\n})\nexport class AjouterEmployeComponent implements OnInit {\n  passage_etape = true;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n"
+        }
+    ]
+}

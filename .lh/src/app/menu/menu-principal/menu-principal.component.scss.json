@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/menu/menu-principal/menu-principal.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1704276929735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1704276929735,
+            "name": "Commit-0",
+            "content": "a {\r\n    border: none;\r\n    padding: 0;\r\n    text-decoration: none;\r\n    border-radius: 10%;\r\n}\r\nimg {\r\n    width: 11vw;\r\n    padding-top: -10%;\r\n    border-radius: 10%;\r\n    box-shadow: 15px 15px 15px grey;\r\n}\r\n.menu {\r\n    position: relative;\r\n    text-align: center;\r\n    width: 100%;\r\n    left: 50%;\r\n    transform: translate(-50%, 50%);\r\n}\r\n.inline {\r\n    display: inline-flex;\r\n    align-items: center;\r\n    padding: 0% 2vw;\r\n}\r\na,\r\na:hover {\r\n    text-decoration: none;\r\n    color: #52595d;\r\n}\r\na:hover, a:focus-visible{\r\n    transform: scale(1.05);\r\n}\r\na{\r\n    transition: transform 250ms;\r\n}\r\n@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {\r\n    .inline {\r\n        display: block;\r\n        align-items: center;\r\n    }\r\n    img {\r\n        width: 39vw;\r\n        padding-top: -10%;\r\n        border-radius: 10%;\r\n        box-shadow: 15px 15px 15px grey;\r\n    }\r\n\r\n    .menu{\r\n        position: relative;\r\n        text-align: center;\r\n        width: 100%;\r\n        left: 50%;\r\n        transform: translate(-50%, 0%);\r\n    }\r\n\r\n}\r\n"
+        }
+    ]
+}

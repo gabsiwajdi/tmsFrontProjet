@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/app.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703849004481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704280285108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,15 @@\n import { AppRoutingModule } from './app-routing.module';\n import { AppComponent } from './app.component';\n import { MenuComponent } from './menu/menu.component';\n import { MenuPrincipalComponent } from './menu/menu-principal/menu-principal.component';\n+import { MatDatepickerModule } from '@angular/material/datepicker';\n+import { DatePipe } from '@angular/common';\n+import { MatPaginatorIntl } from '@angular/material/paginator';\n \n @NgModule({\n   declarations: [AppComponent, MenuComponent, MenuPrincipalComponent],\n   imports: [BrowserModule, AppRoutingModule],\n-  providers: [],\n+  providers: [MatDatepickerModule, DatePipe, { provide: MatPaginatorIntl}],\n   bootstrap: [AppComponent],\n })\n export class AppModule {}\n"
+                },
+                {
+                    "date": 1704356207338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,14 @@\n import { MenuPrincipalComponent } from './menu/menu-principal/menu-principal.component';\n import { MatDatepickerModule } from '@angular/material/datepicker';\n import { DatePipe } from '@angular/common';\n import { MatPaginatorIntl } from '@angular/material/paginator';\n+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n \n+\n @NgModule({\n   declarations: [AppComponent, MenuComponent, MenuPrincipalComponent],\n-  imports: [BrowserModule, AppRoutingModule],\n+  imports: [BrowserModule, AppRoutingModule,BrowserAnimationsModule],\n   providers: [MatDatepickerModule, DatePipe, { provide: MatPaginatorIntl }],\n   bootstrap: [AppComponent],\n })\n export class AppModule {}\n"
+                }
+            ],
+            "date": 1703849004481,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { MenuComponent } from './menu/menu.component';\nimport { MenuPrincipalComponent } from './menu/menu-principal/menu-principal.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    MenuComponent,\n    MenuPrincipalComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n   \n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n"
+        }
+    ]
+}

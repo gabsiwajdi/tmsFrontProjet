@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/rh-routing.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703841388458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703841502857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,20 @@\n import { NgModule } from '@angular/core';\n import { Routes, RouterModule } from '@angular/router';\n+import { EmployeComponent } from './components/employe/employe.component';\n+import { AjouterEmployeComponent } from './components/employe/ajouter-employe/ajouter-employe.component';\n+import { ModifierEmployeComponent } from './components/employe/modifier-employe/modifier-employe.component';\n+import { ListeEmployeComponent } from './components/employe/liste-employe/liste-employe.component';\n \n const routes: Routes = [\n   {\n     path: '',\n     component: EmployeComponent,\n     children: [\n-      { path: 'Ajouter-employee', component: AjoutEmployeComponent },\n+      { path: 'Ajouter-employee', component: AjouterEmployeComponent },\n       { path: 'Modifer-employee/:id', component: ModifierEmployeComponent },\n-      { path: 'Lister-employee', component: ListerEmployeComponent },\n-      {\n-        path: 'Visualiser-employee/:id',\n-        component: VisualiserEmployeComponent,\n-      },\n+      { path: 'Lister-employee', component: ListeEmployeComponent },\n+    \n     ],\n   },\n ];\n \n"
+                },
+                {
+                    "date": 1703841557075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import { ListeEmployeComponent } from './components/employe/liste-employe/liste-employe.component';\n \n const routes: Routes = [\n   {\n-    path: '',\n+    path: 'Menu-employe',\n     component: EmployeComponent,\n     children: [\n       { path: 'Ajouter-employee', component: AjouterEmployeComponent },\n       { path: 'Modifer-employee/:id', component: ModifierEmployeComponent },\n"
+                }
+            ],
+            "date": 1703841388458,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { Routes, RouterModule } from '@angular/router';\n\nconst routes: Routes = [{ path: '', component: EmployeComponent , children: [\n  { path: 'Ajouter-employee', component: AjoutEmployeComponent },\n  { path: 'Modifer-employee/:id', component: ModifierEmployeComponent },\n  { path: 'Lister-employee', component: ListerEmployeComponent },\n  { path: 'Visualiser-employee/:id', component: VisualiserEmployeComponent }]}];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class RhRoutingModule { }\n"
+        }
+    ]
+}
