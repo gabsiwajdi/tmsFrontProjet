@@ -56,7 +56,7 @@
                 <div class="col-md-3 mb-3">
 
                     <mat-form-field>
-                        <mat-label for="dateDelivranceIdentite"> Date De Naissance </mat-label>
+                        <mat-label for="dateNaissance"> Date De Naissance </mat-label>
                         <input matInput formControlName="dateNaissance" id="dateNaissance" [matDatepicker]="picker1"
                             placeholder="DD/MM/YYYY" name="dateNaissance">
                         <mat-datepicker-toggle matSuffix [for]="picker1" value="dateNaissance">
@@ -96,9 +96,9 @@
 
                     <mat-form-field>
 
-                        <mat-label for="enfantEnCharge">Enfant En Charge</mat-label>
-                        <input type="number" matInput formControlName="enfantEnCharge" id="enfantEnCharge"
-                            name="enfantEnCharge" required>
+                        <mat-label for="enfantCharge">Enfant En Charge</mat-label>
+                        <input type="number" matInput formControlName="enfantCharge" id="enfantCharge"
+                            name="enfantCharge" required>
 
                     </mat-form-field>
                 </div>
@@ -107,9 +107,9 @@
 
                     <mat-form-field>
 
-                        <mat-label for="pieceIdentite"> Type Piece Identité </mat-label>
-                        <mat-select formControlName="pieceIdentite" id="pieceIdentite" name="pieceIdentite"
-                            placeholder="pieceIdentite">
+                        <mat-label for="typeIdentite"> Type Piece Identité </mat-label>
+                        <mat-select formControlName="typeIdentite" id="typeIdentite" name="typeIdentite"
+                            placeholder="typeIdentite">
                             <mat-option></mat-option>
                             <mat-option value="cin">CIN </mat-option>
                             <mat-option value="passport">Passport </mat-option>
@@ -123,9 +123,9 @@
 
                     <mat-form-field>
 
-                        <mat-label for="numRegistreCommerciale">N°Piece Identite </mat-label>
-                        <input type="text" matInput formControlName="numPieceIdentite" id="numPieceIdentite"
-                            name="numPieceIdentite" required>
+                        <mat-label for="numIdentite">N°Piece Identite </mat-label>
+                        <input type="text" matInput formControlName="numIdentite" id="numIdentite" name="numIdentite"
+                            required>
 
                     </mat-form-field>
 
@@ -135,10 +135,10 @@
                 <div class="col-md-3 mb-3">
 
                     <mat-form-field>
-                        <mat-label for="dateDelivranceIdentite"> Date De Délivrance </mat-label>
-                        <input matInput formControlName="dateDelivranceIdentite" id="dateDelivranceIdentite"
-                            [matDatepicker]="picker4" placeholder="DD/MM/YYYY" name="dateDelivranceIdentite">
-                        <mat-datepicker-toggle matSuffix [for]="picker4" value="dateDelivranceIdentite">
+                        <mat-label for="datePieceIdentite"> Date De Délivrance </mat-label>
+                        <input matInput formControlName="datePieceIdentite" id="datePieceIdentite"
+                            [matDatepicker]="picker4" placeholder="DD/MM/YYYY" name="datePieceIdentite">
+                        <mat-datepicker-toggle matSuffix [for]="picker4" value="datePieceIdentite">
                         </mat-datepicker-toggle>
                         <mat-datepicker #picker4></mat-datepicker>
 
@@ -182,7 +182,7 @@
                     <mat-form-field>
                         <mat-label> Image du Employé </mat-label>
                         <ngx-mat-file-input matInput id="image" name="image" formControlName="image"
-                            placeholder="Sélectionner image" accept="image/png, image/jpeg">
+                            placeholder="Sélectionner image" (change)="choixImage()" accept="image/png, image/jpeg">
                         </ngx-mat-file-input>
                     </mat-form-field>
                 </div>
@@ -246,15 +246,15 @@
                             placeholder="categoriePermis"
                             [disabled]="InformationsSupplimentaireForm.get('permis').value === 'non'">
                             <mat-option></mat-option>
-                            <mat-option value="a">A </mat-option>
+                            <mat-option value="A">A </mat-option>
                             <mat-option value="b">B </mat-option>
-                            <mat-option value="c">C</mat-option>
-                            <mat-option value="be">B+E </mat-option>
-                            <mat-option value="ce">C+E </mat-option>
-                            <mat-option value="d">D</mat-option>
-                            <mat-option value="de">D+E</mat-option>
-                            <mat-option value="d1">D1</mat-option>
-                            <mat-option value="h">H</mat-option>
+                            <mat-option value="C">C</mat-option>
+                            <mat-option value="B+E">B+E </mat-option>
+                            <mat-option value="C+E">C+E </mat-option>
+                            <mat-option value="D">D</mat-option>
+                            <mat-option value="D+E">D+E</mat-option>
+                            <mat-option value="D1">D1</mat-option>
+                            <mat-option value="H">H</mat-option>
 
                         </mat-select>
 
@@ -264,7 +264,7 @@
 
                 <div class="col-md-3 mb-3">
                     <mat-form-field>
-                        <mat-label for="dateExpirationPermis"> Date De Délivrance </mat-label>
+                        <mat-label for="dateExpirationPermis"> Date Expiration Pérmis </mat-label>
                         <input matInput formControlName="dateExpirationPermis" id="dateExpirationPermis"
                             [matDatepicker]="picker2" placeholder="DD/MM/YYYY" name="dateExpirationPermis">
                         <mat-datepicker-toggle matSuffix [for]="picker2" value="dateExpirationPermis"
@@ -293,9 +293,9 @@
 
                     <mat-form-field>
 
-                        <mat-label for="numImattriculationSociale">N° Immatriculation Sociale </mat-label>
-                        <input type="text" matInput formControlName="numImattriculationSociale"
-                            id="numImattriculationSociale" name="numImattriculationSociale" required>
+                        <mat-label for="numImmatriculationSociale">N° Immatriculation Sociale </mat-label>
+                        <input type="text" matInput formControlName="numImmatriculationSociale"
+                            id="numImmatriculationSociale" name="numImmatriculationSociale" required>
                     </mat-form-field>
 
                 </div>
@@ -306,7 +306,7 @@
 
                         <mat-label for="description">Description </mat-label>
                         <input type="text" matInput formControlName="description" id="description" name="description"
-                            required>
+                            >
                     </mat-form-field>
 
 

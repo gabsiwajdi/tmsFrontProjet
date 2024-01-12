@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/app/tms/tms.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1705053892462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1705053920978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,16 +8,17 @@\n import { ModifierMissionComponent } from './components/mission/modifier-mission/modifier-mission.component';\n import { TmsComponent } from './tms.component';\n import { MissionComponent } from './components/mission/mission.component';\n import { VehieculeComponent } from './components/vehiecule/vehiecule.component';\n-import { VehieculeModule } from './components/vehiecule/vehiecule.module';\n \n-\n @NgModule({\n-  declarations: [AjouterVehieculeComponent, ListerVehieculeComponent, AjouterMissionComponent, ModifierMissionComponent, TmsComponent, MissionComponent],\n-  imports: [\n-    CommonModule,\n-    TmsRoutingModule,\n-    VehieculeModule\n-  ]\n+  declarations: [\n+    AjouterVehieculeComponent,\n+    ListerVehieculeComponent,\n+    AjouterMissionComponent,\n+    ModifierMissionComponent,\n+    TmsComponent,\n+    MissionComponent,\n+  ],\n+  imports: [CommonModule, TmsRoutingModule],\n })\n-export class TmsModule { }\n+export class TmsModule {}\n"
+                },
+                {
+                    "date": 1705053980386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n import { AjouterMissionComponent } from './components/mission/ajouter-mission/ajouter-mission.component';\n import { ModifierMissionComponent } from './components/mission/modifier-mission/modifier-mission.component';\n import { TmsComponent } from './tms.component';\n import { MissionComponent } from './components/mission/mission.component';\n-import { VehieculeComponent } from './components/vehiecule/vehiecule.component';\n \n @NgModule({\n   declarations: [\n     AjouterVehieculeComponent,\n"
+                },
+                {
+                    "date": 1705054032334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import { AjouterMissionComponent } from './components/mission/ajouter-mission/ajouter-mission.component';\n import { ModifierMissionComponent } from './components/mission/modifier-mission/modifier-mission.component';\n import { TmsComponent } from './tms.component';\n import { MissionComponent } from './components/mission/mission.component';\n+import { MatFormFieldModule } from '@angular/material/form-field';\n \n @NgModule({\n   declarations: [\n     AjouterVehieculeComponent,\n@@ -17,7 +18,8 @@\n     ModifierMissionComponent,\n     TmsComponent,\n     MissionComponent,\n   ],\n-  imports: [CommonModule, TmsRoutingModule],\n+  imports: [CommonModule, TmsRoutingModule,MatFormFieldModule\n+  ],\n })\n export class TmsModule {}\n"
+                },
+                {
+                    "date": 1705054327439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n import { MatFormFieldModule } from '@angular/material/form-field';\n \n @NgModule({\n   declarations: [\n-    AjouterVehieculeComponent,\n     ListerVehieculeComponent,\n     AjouterMissionComponent,\n     ModifierMissionComponent,\n     TmsComponent,\n"
+                },
+                {
+                    "date": 1705054338186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n import { MatFormFieldModule } from '@angular/material/form-field';\n \n @NgModule({\n   declarations: [\n+    AjouterVehieculeComponent,\n     ListerVehieculeComponent,\n     AjouterMissionComponent,\n     ModifierMissionComponent,\n     TmsComponent,\n"
+                },
+                {
+                    "date": 1705054508289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import { NgModule } from '@angular/core';\n import { CommonModule } from '@angular/common';\n \n import { TmsRoutingModule } from './tms-routing.module';\n-import { AjouterVehieculeComponent } from './components/vehiecule/ajouter-vehiecule/ajouter-vehiecule.component';\n import { ListerVehieculeComponent } from './components/vehiecule/lister-vehiecule/lister-vehiecule.component';\n import { AjouterMissionComponent } from './components/mission/ajouter-mission/ajouter-mission.component';\n import { ModifierMissionComponent } from './components/mission/modifier-mission/modifier-mission.component';\n import { TmsComponent } from './tms.component';\n@@ -11,9 +10,8 @@\n import { MatFormFieldModule } from '@angular/material/form-field';\n \n @NgModule({\n   declarations: [\n-    AjouterVehieculeComponent,\n     ListerVehieculeComponent,\n     AjouterMissionComponent,\n     ModifierMissionComponent,\n     TmsComponent,\n"
+                }
+            ],
+            "date": 1705053892462,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { TmsRoutingModule } from './tms-routing.module';\nimport { AjouterVehieculeComponent } from './components/vehiecule/ajouter-vehiecule/ajouter-vehiecule.component';\nimport { ListerVehieculeComponent } from './components/vehiecule/lister-vehiecule/lister-vehiecule.component';\nimport { AjouterMissionComponent } from './components/mission/ajouter-mission/ajouter-mission.component';\nimport { ModifierMissionComponent } from './components/mission/modifier-mission/modifier-mission.component';\nimport { TmsComponent } from './tms.component';\nimport { MissionComponent } from './components/mission/mission.component';\nimport { VehieculeComponent } from './components/vehiecule/vehiecule.component';\nimport { VehieculeModule } from './components/vehiecule/vehiecule.module';\n\n\n@NgModule({\n  declarations: [AjouterVehieculeComponent, ListerVehieculeComponent, AjouterMissionComponent, ModifierMissionComponent, TmsComponent, MissionComponent],\n  imports: [\n    CommonModule,\n    TmsRoutingModule,\n    VehieculeModule\n  ]\n})\nexport class TmsModule { }\n"
+        }
+    ]
+}

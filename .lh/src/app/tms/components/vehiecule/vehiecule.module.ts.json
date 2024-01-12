@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/tms/components/vehiecule/vehiecule.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1705054189371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1705054217611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,11 +21,12 @@\n import { FormsModule, ReactiveFormsModule } from '@angular/forms';\n import { MatCheckboxModule } from '@angular/material/checkbox';\n import { MatCardModule } from '@angular/material/card';\n import { NgxMatFileInputModule } from '@angular-material-components/file-input';\n+import { AjouterVehieculeComponent } from './ajouter-vehiecule/ajouter-vehiecule.component';\n \n @NgModule({\n-  declarations: [VehieculeComponent],\n+  declarations: [VehieculeComponent,AjouterVehieculeComponent],\n   imports: [\n     CommonModule,\n     VehieculeRoutingModule,\n     MatFormFieldModule,\n"
+                },
+                {
+                    "date": 1705054345244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n import { NgxMatFileInputModule } from '@angular-material-components/file-input';\n import { AjouterVehieculeComponent } from './ajouter-vehiecule/ajouter-vehiecule.component';\n \n @NgModule({\n-  declarations: [VehieculeComponent, AjouterVehieculeComponent],\n+  declarations: [VehieculeComponent],\n   imports: [\n     CommonModule,\n     VehieculeRoutingModule,\n     MatFormFieldModule,\n"
+                }
+            ],
+            "date": 1705054189371,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { VehieculeRoutingModule } from './vehiecule-routing.module';\nimport { VehieculeComponent } from './vehiecule.component';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatStepperModule } from '@angular/material/stepper';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatDatepickerModule } from '@angular/material/datepicker';\nimport { MatNativeDateModule } from '@angular/material/core';\nimport { MatSelectModule } from '@angular/material/select';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\nimport { MatTableModule } from '@angular/material/table';\nimport { MatSortModule } from '@angular/material/sort';\nimport { MatPaginatorModule } from '@angular/material/paginator';\nimport { MatTableFilterModule } from 'mat-table-filter';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\nimport { MatTabsModule } from '@angular/material/tabs';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { MatCheckboxModule } from '@angular/material/checkbox';\nimport { MatCardModule } from '@angular/material/card';\nimport { NgxMatFileInputModule } from '@angular-material-components/file-input';\n\n\n@NgModule({\n  declarations: [VehieculeComponent],\n  imports: [\n    CommonModule,\n    VehieculeRoutingModule,\n    MatFormFieldModule,\n    MatStepperModule,\n    MatIconModule,\n    MatInputModule,\n    MatDatepickerModule,\n    MatNativeDateModule,\n    MatSelectModule,\n    MatButtonModule,\n    MatProgressBarModule,\n    MatTableModule,\n    MatSortModule,\n    MatPaginatorModule,\n    MatTableFilterModule,\n    MatProgressSpinnerModule,\n    MatTabsModule,\n    FormsModule,\n    ReactiveFormsModule,\n    MatCheckboxModule,\n    MatCardModule,\n    NgxMatFileInputModule,\n  ]\n})\nexport class VehieculeModule { }\n"
+        }
+    ]
+}

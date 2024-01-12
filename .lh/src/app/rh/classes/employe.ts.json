@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/classes/employe.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1704793112355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704793149832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,7 @@\n   idEmployee: any;\n   nom: string;\n   prenom: string;\n   role: string;\n+  typeIdentite:string;\n+  \n }\n"
+                },
+                {
+                    "date": 1704793184692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,7 @@\n   nom: string;\n   prenom: string;\n   role: string;\n   typeIdentite: string;\n+  numIdentite:string;\n+  \n }\n"
+                }
+            ],
+            "date": 1704793112355,
+            "name": "Commit-0",
+            "content": "export class Employe {\n    idEmployee:any;\n    nom:string;\n    prenom:string;\n    role:string;\n    \n\n\n}\n"
+        }
+    ]
+}

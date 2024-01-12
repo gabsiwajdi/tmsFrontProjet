@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/rh/components/employe/liste-employe/liste-employe.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1704465269740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704465426491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   styleUrls: ['./liste-employe.component.scss'],\n })\n export class ListeEmployeComponent implements OnInit {\n   form = new FormGroup({\n-    id_Employe: new FormControl(''),\n+    idEmploye: new FormControl(''),\n     nom: new FormControl(''),\n     role: new FormControl(''),\n     acces: new FormControl(''),\n     pays: new FormControl(''),\n"
+                },
+                {
+                    "date": 1704465635861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,26 @@\n import { Component, OnInit } from '@angular/core';\n import { FormControl, FormGroup } from '@angular/forms';\n+import { MatTableDataSource } from '@angular/material/table';\n \n @Component({\n   selector: 'app-liste-employe',\n   templateUrl: './liste-employe.component.html',\n   styleUrls: ['./liste-employe.component.scss'],\n })\n export class ListeEmployeComponent implements OnInit {\n+  dataSource = new MatTableDataSource<table>();\n+  displayedColumns: string[] = [\n+    'editer',\n+    'Image',\n+    'id_Employe',\n+    'nom',\n+    'role',\n+    'acces',\n+    'pays',\n+    'ville',\n+    'Supprimer',\n+  ];\n   form = new FormGroup({\n     idEmploye: new FormControl(''),\n     nom: new FormControl(''),\n     role: new FormControl(''),\n"
+                }
+            ],
+            "date": 1704465269740,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\nimport { FormControl, FormGroup } from '@angular/forms';\n\n@Component({\n  selector: 'app-liste-employe',\n  templateUrl: './liste-employe.component.html',\n  styleUrls: ['./liste-employe.component.scss']\n})\nexport class ListeEmployeComponent implements OnInit {\n\n  form = new FormGroup({\n    id_Employe: new FormControl(''),\n    nom: new FormControl(''),\n    role: new FormControl(''),\n    acces: new FormControl(''),\n    pays: new FormControl(''),\n    ville: new FormControl(''),\n  });\n\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n"
+        }
+    ]
+}

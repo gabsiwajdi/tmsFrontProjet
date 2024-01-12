@@ -14,7 +14,8 @@ export class AjouterEmployeComponent implements OnInit {
   informationsBanquesForm: FormGroup;
   InformationsSupplimentaireForm: FormGroup;
   employe: any;
-
+  image: File;
+  imageSrc: any;
   constructor(private fb: FormBuilder, private service: EmployeService) {
     this.InformationsGeneralesForm = this.fb.group({
       nom: ['', Validators.required],
@@ -25,15 +26,15 @@ export class AjouterEmployeComponent implements OnInit {
       dateNaissance: ['', Validators.required],
       nationalite: ['', Validators.required],
       situationFamiliale: ['', Validators.required],
-      enfantEnCharge: ['', Validators.required],
-      pieceIdentite: ['', Validators.required],
-      numPieceIdentite: ['', Validators.required],
-      dateDelivranceIdentite: ['', Validators.required],
+      enfantCharge: ['', Validators.required],
+      typeIdentite: ['', Validators.required],
+      numIdentite: ['', Validators.required],
+      datePieceIdentite: ['', Validators.required],
       posteEmploye: ['', Validators.required],
     });
 
     this.informationsBanquesForm = this.fb.group({
-      image: [],
+      image: [''],
       banque: ['', Validators.required],
       rib: ['', Validators.required],
     });
@@ -43,8 +44,8 @@ export class AjouterEmployeComponent implements OnInit {
       categoriePermis: [''],
       dateExpirationPermis: [''],
       cnss: ['', Validators.required],
-      numImattriculationSociale: ['', Validators.required],
-      description: ['', Validators.required],
+      numImmatriculationSociale: ['', Validators.required],
+      description: [''],
     });
   }
 
@@ -57,29 +58,33 @@ export class AjouterEmployeComponent implements OnInit {
       ville: this.InformationsGeneralesForm.value.ville,
       adress: this.InformationsGeneralesForm.value.adress,
       tel: this.InformationsGeneralesForm.value.tel,
-      dateNaissance: this.InformationsGeneralesForm.value.dateNaissance,
+      dateNaissance: new Date(
+        this.InformationsGeneralesForm.value.dateNaissance
+      ),
       nationalite: this.InformationsGeneralesForm.value.nationalite,
       situationFamiliale:
         this.InformationsGeneralesForm.value.situationFamiliale,
-      enfantEnCharge: this.InformationsGeneralesForm.value.enfantEnCharge,
-      pieceIdentite: this.InformationsGeneralesForm.value.pieceIdentite,
-      numPieceIdentite: this.InformationsGeneralesForm.value.numPieceIdentite,
-      dateDelivranceIdentite:
-        this.InformationsGeneralesForm.value.dateDelivranceIdentite,
+      enfantCharge: this.InformationsGeneralesForm.value.enfantCharge,
+      typeIdentite: this.InformationsGeneralesForm.value.typeIdentite,
+      numIdentite: this.InformationsGeneralesForm.value.numIdentite,
+      datePieceIdentite: new Date(
+        this.InformationsGeneralesForm.value.datePieceIdentite
+      ),
       posteEmploye: this.InformationsGeneralesForm.value.posteEmploye,
 
-      image: this.informationsBanquesForm.value.image,
+      image: this.imageSrc ? this.imageSrc.toString('base64') : null,
       banque: this.informationsBanquesForm.value.banque,
       rib: this.informationsBanquesForm.value.rib,
 
       permis: this.InformationsSupplimentaireForm.value.permis,
       categoriePermis:
         this.InformationsSupplimentaireForm.value.categoriePermis,
-      dateExpirationPermis:
-        this.InformationsSupplimentaireForm.value.dateExpirationPermis,
+      dateExpirationPermis: new Date(
+        this.InformationsSupplimentaireForm.value.dateExpirationPermis
+      ),
       cnss: this.InformationsSupplimentaireForm.value.cnss,
-      numImattriculationSociale:
-        this.InformationsSupplimentaireForm.value.numImattriculationSociale,
+      numImmatriculationSociale:
+        this.InformationsSupplimentaireForm.value.numImmatriculationSociale,
       description: this.InformationsSupplimentaireForm.value.description,
     };
 
@@ -90,9 +95,22 @@ export class AjouterEmployeComponent implements OnInit {
       console.log(this.employe);
       Swal.fire({
         icon: 'success',
-        text: 'employe ajouter avec succes!',
+        text: 'employe ajouté avec succès!',
         timer: 1500,
       });
     });
+  }
+
+  choixImage() {
+    const imageControl = this.informationsBanquesForm.get('image');
+    const file: File = imageControl.value;
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imageSrc = reader.result as string;
+      };
+      reader.readAsDataURL(file);
+    }
   }
 }

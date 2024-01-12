@@ -1,1 +1,101 @@
-<p>liste-employe works!</p>
+<div>
+    <section class="filtres">
+
+        <mat-form-field class="filtre" [formGroup]="filtrform">
+            <mat-label>Nom</mat-label>
+            <input matInput placeholder="Nom" formControlName="nom" (keyup)="filtre()" id="id">
+            <i matSuffix class="fa fa-filter" aria-hidden="true"></i>
+        </mat-form-field>
+        <mat-form-field class="filtre" [formGroup]="filtrform">
+            <mat-label>prenom</mat-label>
+            <input matInput placeholder="Prenom" formControlName="prenom" (keyup)="filtre()" id="id">
+            <i matSuffix class="fa fa-filter" aria-hidden="true"></i>
+        </mat-form-field>
+        <mat-form-field class="filtre" [formGroup]="filtrform">
+            <mat-label>Role</mat-label>
+            <input matInput placeholder="Role Employe" formControlName="posteEmploye" (keyup)="filtre()" id="id">
+            <i matSuffix class="fa fa-filter" aria-hidden="true"></i>
+        </mat-form-field>
+
+        <mat-form-field class="filtre" [formGroup]="filtrform">
+            <mat-label>Categorie Permis</mat-label>
+            <input matInput placeholder="Categorie Permis" formControlName="categoriePermis" (keyup)="filtre()"
+                id="categoriePermis">
+            <i matSuffix class="fa fa-filter" aria-hidden="true"></i>
+        </mat-form-field>
+        <mat-form-field class="filtre" [formGroup]="filtrform" style="margin-left: 1%;">
+            <mat-label>Ville</mat-label>
+            <input matInput placeholder="Tel" formControlName="ville" (keyup)="filtre()" id="type_be">
+            <i matSuffix class="fa fa-filter" aria-hidden="true"></i>
+        </mat-form-field>
+
+    </section>
+</div>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="editer">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="ID">
+                <i class="pe-7s-pen" title="Modifier  "
+                    routerLink="/Menu/Menu-rh/Menu-employe/Modifer-employe/{{element.idEmployee}}">
+                </i>
+            </mat-cell>
+        </ng-container>
+
+
+        <!--Colonne responsable -->
+        <ng-container matColumnDef="nom">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Nom </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="Nom"> {{element.nom}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="prenom">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Prenom </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="Prenom">{{element.prenom}}
+            </mat-cell>
+        </ng-container>
+
+
+        <!--Colonne Ancien ID -->
+        <ng-container matColumnDef="posteEmploye">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Role </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="Role"> {{element.posteEmploye}} </mat-cell>
+        </ng-container>
+
+
+        <!--Colonne Réclamation -->
+        <ng-container matColumnDef="categoriePermis">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Categorie Pérmis </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="Pays"> {{element.categoriePermis}} </mat-cell>
+        </ng-container>
+
+        <!--Colonne email -->
+        <ng-container matColumnDef="ville">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Ville </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="Ville"> {{element.ville}} </mat-cell>
+        </ng-container>
+
+        <!--Colonne supprimer -->
+        <ng-container matColumnDef="Supprimer">
+            <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <mat-cell *matCellDef="let element" style="text-align: center;">
+
+                <i class="pe-7s-search"
+                    routerLink="/Menu/Menu-RH/Menu-employee/Visualiser-employee/{{element.idEmployee}}"
+                    title="Visualiser" style="color: green;">
+                </i>
+
+                <i class="pe-7s-trash" (click)="supprimerEmploye(element.idEmployee)" title="Supprimer employe"
+                    style="color: red; margin-left: 15px;">
+                </i>
+
+            </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

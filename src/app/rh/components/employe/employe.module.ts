@@ -30,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import { ModifierEmployeComponent } from './modifier-employe/modifier-employe.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
@@ -38,6 +39,7 @@ import { NgxMatFileInputModule } from '@angular-material-components/file-input';
     AjouterContratComponent,
     AjouterEmployeComponent,
     ListeEmployeComponent,
+    ModifierEmployeComponent,
   ],
   imports: [
     CommonModule,

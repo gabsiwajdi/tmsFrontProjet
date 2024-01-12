@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1703844319817,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704988801404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,15 @@\n import { NgModule } from '@angular/core';\n import { Routes, RouterModule } from '@angular/router';\n import { TmsComponent } from './tms.component';\n \n-const routes: Routes = [{ path: '', component: TmsComponent }];\n+const routes: Routes = [{ path: '', component: TmsComponent }, {\n+  path: 'Menu-employe',\n+  loadChildren: () =>\n+    import('./components/employe/employe.module').then(\n+      (m) => m.EmployeModule\n+    ),\n+},];\n \n @NgModule({\n   imports: [RouterModule.forChild(routes)],\n   exports: [RouterModule],\n"
+                },
+                {
+                    "date": 1704989082850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,74 @@\n import { TmsComponent } from './tms.component';\n \n const routes: Routes = [\n   { path: '', component: TmsComponent },\n+\n   {\n-    path: 'Menu-employe',\n+    path: 'Menu-carburant',\n     loadChildren: () =>\n-      import('./components/employe/employe.module').then(\n-        (m) => m.EmployeModule\n+      import('./components/carburant/carburant.module').then(\n+        (m) => m.CarburantModule\n       ),\n+\n   },\n+\n+  {\n+    path: 'Menu-commande',\n+    loadChildren: () =>\n+      import('./components/commande/commande.module').then(\n+        (m) => m.CommandeModule\n+      ),\n+\n+  },\n+  {\n+    path: 'Menu-entretient',\n+    loadChildren: () =>\n+      import('./components/entretient/entretient.module').then(\n+        (m) => m.EntretientModule\n+      ),\n+\n+  },\n+  {\n+    path: 'Menu-marchendise',\n+    loadChildren: () =>\n+      import('./components/marchendise/marchendise.module').then(\n+        (m) => m.MarchendiseModule\n+      ),\n+\n+  },\n+  {\n+    path: 'Menu-mission',\n+    loadChildren: () =>\n+      import('./components/mission/mission.module').then(\n+        (m) => m.MissionModule\n+      ),\n+\n+  },\n+  {\n+    path: 'Menu-produits',\n+    loadChildren: () =>\n+      import('./components/produits/produits.module').then(\n+        (m) => m.ProduitsModule\n+      ),\n+\n+  },\n+  {\n+    path: 'region',\n+    loadChildren: () =>\n+      import('./components/region/region.module').then(\n+        (m) => m.RegionModule\n+      ),\n+\n+  },\n+  {\n+    path: 'Menu-vehiecule',\n+    loadChildren: () =>\n+      import('./components/vehiecule/vehiecule.module').then(\n+        (m) => m.VehieculeModule\n+      ),\n+\n+  },\n ];\n \n @NgModule({\n   imports: [RouterModule.forChild(routes)],\n"
                 }
             ],
             "date": 1703844319817,

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/tms/components/vehiecule/ajouter-vehiecule/ajouter-vehiecule.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1705054752873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1705054767716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n   templateUrl: './ajouter-vehiecule.component.html',\n   styleUrls: ['./ajouter-vehiecule.component.scss'],\n })\n export class AjouterVehieculeComponent implements OnInit {\n+\n+  etapeSuivant=true;\n   InformationsVehiculeForm: FormGroup;\n \n   constructor() {}\n \n"
+                },
+                {
+                    "date": 1705056668012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n })\n export class AjouterVehieculeComponent implements OnInit {\n   etapeSuivant = true;\n   InformationsVehiculeForm: FormGroup;\n+  informationsSupplimentaireForm:FormGroup;\n \n   constructor() {}\n \n   ngOnInit(): void {}\n"
+                }
+            ],
+            "date": 1705054752873,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\nimport { FormGroup } from '@angular/forms';\n\n@Component({\n  selector: 'app-ajouter-vehiecule',\n  templateUrl: './ajouter-vehiecule.component.html',\n  styleUrls: ['./ajouter-vehiecule.component.scss']\n})\nexport class AjouterVehieculeComponent implements OnInit {\n\n  InformationsVehiculeForm:FormGroup;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n"
+        }
+    ]
+}

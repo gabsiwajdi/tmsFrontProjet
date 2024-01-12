@@ -11,7 +11,10 @@ const routes: Routes = [
     component: EmployeComponent,
     children: [
       { path: 'Ajouter-employe', component: AjouterEmployeComponent },
-      { path: 'Modifer-employe/:id', component: ModifierEmployeComponent },
+      {
+        path: 'Modifer-employe/:idEmployee',
+        component: ModifierEmployeComponent,
+      },
       { path: 'Lister-employes', component: ListeEmployeComponent },
     ],
   },

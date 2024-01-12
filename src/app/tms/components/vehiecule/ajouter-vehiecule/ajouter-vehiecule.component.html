@@ -1,1 +1,295 @@
-<p>ajouter-vehiecule works!</p>
+<mat-vertical-stepper [linear]="etapeSuivant" #stepper>
+    <mat-step [stepControl]="InformationsVehiculeForm">
+        <form [formGroup]="InformationsVehiculeForm">
+
+            <ng-template matStepLabel>Informations Véhicule</ng-template>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+
+                        <mat-label for="matricule">Matricule Véhicule </mat-label>
+                        <input type="text" matInput formControlName="matricule" id="matricule" name="matricule"
+                            required>
+
+                    </mat-form-field>
+
+
+                </div>
+                <mat-form-field>
+
+                    <mat-label for="model">Model Véhicule </mat-label>
+                    <input type="text" matInput formControlName="model" id="model" name="model" required>
+
+                </mat-form-field>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="couleur">Couleur Véhicule </mat-label>
+                        <input type="text" matInput formControlName="couleur" id="couleur" name="couleur" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="categories"> Catégorie Véhicule </mat-label>
+                        <mat-select formControlName="categories" id="categories" name="categories"
+                            placeholder="categories">
+                            <mat-option></mat-option>
+                            <mat-option value="Véhicules de Tourisme ">Véhicules de Tourisme </mat-option>
+                            <mat-option value="Véhicules Commerciale Légers">Véhicules Commerciale Légers </mat-option>
+                            <mat-option value="Véhicules Commerciale Lourds">Véhicules Commerciale Lourds </mat-option>
+                            <mat-option value="Véhicules Électriques">Véhicules Électriques </mat-option>
+                            <mat-option value="Véhicules de Livraison Frigorifiques">Véhicules de Livraison
+                                Frigorifiques </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+                        <mat-label for="marque"> Marque </mat-label>
+                        <input type="text" matInput formControlName="marque" id="marque" name="marque" required>
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="carburant"> Carburant</mat-label>
+                        <mat-select formControlName="carburant" id="carburant" name="carburant" placeholder="carburant">
+                            <mat-option></mat-option>
+                            <mat-option value="essence">Essence </mat-option>
+                            <mat-option value="diesel">Diesel </mat-option>
+                            <mat-option value="gazGNC">Gaz Naturel Comprimé (GNC) </mat-option>
+                            <mat-option value="gplGaz">GPL (Gaz de Pétrole Liquéfié) </mat-option>
+                            <mat-option value="ethanol">Éthanol (E85) </mat-option>
+                            <mat-option value="electricité ">Électricité </mat-option>
+                            <mat-option value="hydrogène  ">Hydrogène </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div>
+                <button mat-button matStepperNext class="btn-primary" style="margin-top: 20px;">Valider</button>
+            </div>
+        </form>
+    </mat-step>
+
+    <mat-step [stepControl]="informationsSupplimentaireForm">
+        <form [formGroup]="informationsSupplimentaireForm">
+            <ng-template matStepLabel>Informations Supplimentaire Véhicule</ng-template>
+
+
+            <div class="row">
+
+                <div class="col-md-3 mb-3">
+
+                    <mat-form-field>
+                        <mat-label for="kmactuel">KM Actuelle </mat-label>
+                        <input type="number" matInput formControlName="kmactuel" id="kmactuel" name="kmactuel" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="chargeUtile">Charge Utile </mat-label>
+                        <input type="number" matInput formControlName="chargeUtile" id="chargeUtile" name="chargeUtile"
+                            required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="longueur">Longueur </mat-label>
+                        <input type="number" matInput formControlName="longueur" id="longueur" name="longueur" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="largeur">Largeur </mat-label>
+                        <input type="number" matInput formControlName="largeur" id="largeur" name="largeur" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="hauteur">Hauteur </mat-label>
+                        <input type="number" matInput formControlName="hauteur" id="hauteur" name="hauteur" required>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="capaciteReservoir">Capacite Reservoir </mat-label>
+                        <input type="number" matInput formControlName="capaciteReservoir" id="capaciteReservoir"
+                            name="capaciteReservoir" required>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="reservoir">Reservoir Actuelle </mat-label>
+                        <input type="number" matInput formControlName="reservoir" id="reservoir" name="reservoir"
+                            required>
+                    </mat-form-field>
+                </div>
+
+
+            </div>
+            <div>
+                <button mat-button matStepperPrevious class="btn-primary"
+                    style="margin-top: 20px; margin-right: 20px;">Retour</button>
+                <button mat-button matStepperNext class="btn-primary" style="margin-top: 20px;">Valider</button>
+            </div>
+        </form>
+
+    </mat-step>
+
+
+    <mat-step [stepControl]="informationsEntretienVehiculeForm">
+        <form [formGroup]="informationsEntretienVehiculeForm">
+
+            <ng-template matStepLabel>Informations Entretient </ng-template>
+
+            <div class="row">
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="datevisite"> Date Prochaine Visite </mat-label>
+                        <input matInput formControlName="datevisite" id="datevisite" [matDatepicker]="picker1"
+                            placeholder="DD/MM/YYYY" name="datevisite">
+                        <mat-datepicker-toggle matSuffix [for]="picker1" value="datevisite">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="dateassurance"> Date Prochaine Assurence </mat-label>
+                        <input matInput formControlName="dateassurance" id="dateassurance" [matDatepicker]="picker2"
+                            placeholder="DD/MM/YYYY" name="dateassurance">
+                        <mat-datepicker-toggle matSuffix [for]="picker2" value="dateassurance">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="datetaxe"> Date Prochaine Taxe </mat-label>
+                        <input matInput formControlName="datetaxe" id="datetaxe" [matDatepicker]="picker3"
+                            placeholder="DD/MM/YYYY" name="datetaxe">
+                        <mat-datepicker-toggle matSuffix [for]="picker3" value="datetaxe">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker3></mat-datepicker>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="kilometrageProchainVidangeHuileMoteur">KM Prochaine Vidange Huile Moteur
+                        </mat-label>
+                        <input type="number" matInput formControlName="kilometrageProchainVidangeHuileMoteur"
+                            id="kilometrageProchainVidangeHuileMoteur" name="kilometrageProchainVidangeHuileMoteur"
+                            required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="kilometrageProchainVidangeLiquideRefroidissement">KM Prochaine Vidange Liquide
+                            Refroidissement </mat-label>
+                        <input type="number" matInput formControlName="kilometrageProchainVidangeLiquideRefroidissement"
+                            id="kilometrageProchainVidangeLiquideRefroidissement"
+                            name="kilometrageProchainVidangeLiquideRefroidissement" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="kilometrageProchainChangementFiltreClimatiseur">KM Prochaine Changement Filtre
+                            Clim
+                        </mat-label>
+                        <input type="number" matInput formControlName="kilometrageProchainChangementFiltreClimatiseur"
+                            id="kilometrageProchainChangementFiltreClimatiseur"
+                            name="kilometrageProchainChangementFiltreClimatiseur" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="kilometrageProchainVidangeHuileBoiteVitesse">KM Prochaine Vidange Huile
+                            Boite Vitesse </mat-label>
+                        <input type="number" matInput formControlName="kilometrageProchainVidangeHuileBoiteVitesse"
+                            id="kilometrageProchainVidangeHuileBoiteVitesse"
+                            name="kilometrageProchainVidangeHuileBoiteVitesse">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="kilometrageProchainChangementFiltreCarburant">KM Prochaine Changement Filtre
+                            Carburant </mat-label>
+                        <input type="number" matInput formControlName="kilometrageProchainChangementFiltreCarburant"
+                            id="kilometrageProchainChangementFiltreCarburant"
+                            name="kilometrageProchainChangementFiltreCarburant" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="kilometrageProchainChangementBougies">KM Prochaine Changement Boujies
+                        </mat-label>
+                        <input type="number" matInput formControlName="kilometrageProchainChangementBougies"
+                            id="kilometrageProchainChangementBougies" name="kilometrageProchainChangementBougies"
+                            required>
+                    </mat-form-field>
+                </div>
+
+
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="kilometrageProchainChangementCourroies">KM Prochaine Changement Courroies
+                        </mat-label>
+                        <input type="number" matInput formControlName="kilometrageProchainChangementCourroies"
+                            id="kilometrageProchainChangementCourroies" name="kilometrageProchainChangementCourroies"
+                            required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="kilometrageProchainChangementPneus">KM Prochaine Changement Pneus </mat-label>
+                        <input type="number" matInput formControlName="kilometrageProchainChangementPneus"
+                            id="kilometrageProchainChangementPneus" name="kilometrageProchainChangementPneus" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="description">Description </mat-label>
+                        <input type="text" matInput formControlName="description" id="description" name="description"
+                            required>
+                    </mat-form-field>
+                </div>
+
+
+                <div>
+                    <button mat-button matStepperPrevious class="btn-primary"
+                        style="margin-top: 20px; margin-right: 20px;">Retour</button>
+                    <button mat-button matStepperNext class="btn-primary"
+                        (click)="ajouterVehiecule()">Enregistrer</button>
+                </div>
+
+            </div>
+        </form>
+    </mat-step>
+
+</mat-vertical-stepper>

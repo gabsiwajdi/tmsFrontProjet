@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/tms/components/commande/commande-routing.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1704989491261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1704989491261,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { Routes, RouterModule } from '@angular/router';\nimport { CommandeComponent } from './commande.component';\n\nconst routes: Routes = [{path:'',component:CommandeComponent}];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class CommandeRoutingModule { }\n"
+        }
+    ]
+}
